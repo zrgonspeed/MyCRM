@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="mycrm" location="32,21" size="445,352">
+    <action name="hr_emp" location="23,29" size="150,62">
+      <result name="login">
+        <resourceEdge source="login" routing="0" target="index.jsp" />
+      </result>
+      <result name="loginerr">
+        <resourceEdge source="loginerr" routing="0" target="login.jsp" />
+      </result>
+    </action>
+    <action name="hr_posi" location="23,103" size="152,83">
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="mana_position.jsp" />
+      </result>
+      <result name="add">
+        <resourceEdge source="add" routing="0" target="mana_position.jsp" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="mana_position.jsp" />
+      </result>
+    </action>
+    <action name="crm_prod" location="24,196" size="148,83">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="crm_product_list.jsp" />
+      </result>
+      <result name="findone">
+        <resourceEdge source="findone" routing="0" target="crm_product_update.jsp" />
+      </result>
+      <result name="toadd">
+        <resourceEdge source="toadd" routing="0" target="crm_product_add.jsp" />
+      </result>
+    </action>
+    <action name="crm_cate" location="222,86" size="146,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="crm_productcate_list.jsp" />
+      </result>
+    </action>
+    <action name="hr_dep" location="219,150" size="144,40" />
+    <action name="param_city" location="221,214" size="142,33" />
+  </package>
+  <webResource name="login.jsp" path="/login.jsp" location="509,50" size="150,55" />
+  <webResource name="index.jsp" path="/index.jsp" location="717,141" size="150,55" />
+  <webResource name="mana_position.jsp" path="/p_hrpages/mana_position.jsp" location="19,458" size="150,55" />
+  <webResource name="index.jsp" path="index.jsp" location="548,218" size="150,55" />
+  <webResource name="crm_product_list.jsp" path="/crm_product_list.jsp" location="200,500" size="150,55" />
+  <webResource name="crm_product_update.jsp" path="/crm_product_update.jsp" location="500,500" size="150,55" />
+  <webResource name="crm_product_add.jsp" path="/crm_product_add.jsp" location="50,650" size="150,55" />
+  <webResource name="crm_productcate_list.jsp" path="/crm_productcate_list.jsp" location="500,350" size="150,55" />
+</Struts2Diagram>
+
