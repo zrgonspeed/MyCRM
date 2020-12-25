@@ -150,7 +150,7 @@
 							<div class="number"> 14 </div> 
 						</div>
 					</div>
-					<div class="tile bg-red">
+					<div class="tile bg-red" url="pages_crm/crm_cont">
 						<div class="corner"></div>
 						<div class="tile-body">
 							<i class="icon-user"></i>
@@ -160,7 +160,7 @@
 							<div class="number">452</div>
 						</div>
 					</div>
-					<div class="tile double bg-purple">
+					<div class="tile double bg-purple" url="pages_crm/ma_contr">
 						<div class="corner"></div>
 						<div class="tile-body">
 							<i class="icon-folder-close"></i>
@@ -170,14 +170,14 @@
 							<div class="number">43</div>
 						</div>
 					</div>
-					<div class="tile bg-yellow">
+					<div class="tile bg-yellow" url="pages_crm/crm_cust">
 						<div class="tile-body"><i class="icon-user-md"></i></div>
 						<div class="tile-object">
 							<div class="name">我的客户</div>
 							<div class="number">121</div>
 						</div>
 					</div>
-					<div class="tile image">
+					<div class="tile image" url="pages_crm/crm_follow!findAll">
 						<div class="tile-body">
 							<img src="media/image/image2.jpg" alt="">
 						</div>
@@ -207,7 +207,7 @@
 							<div class="number"><span id="time"></span></div>
 						</div>
 					</div>
-					<div class="tile bg-blue">
+					<div class="tile bg-blue" url="pages_crm/ma_order?v=0">
 						<div class="tile-body">
 							<i class="icon-edit"></i>
 						</div>
@@ -216,7 +216,7 @@
 							<div class="number">12</div>
 						</div>
 					</div>
-					<div class="tile bg-green">
+					<div class="tile bg-green" url="pages_crm/crm_receive!findAll">
 						<div class="tile-body">
 							<i class="icon-bar-chart"></i>
 						</div>
