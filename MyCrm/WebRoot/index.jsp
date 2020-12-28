@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%> 
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -157,7 +159,7 @@
 						</div>
 						<div class="tile-object">
 							<div class="name">我的联系人</div>
-							<div class="number">452</div>
+							<div class="number">${contNum}</div>
 						</div>
 					</div>
 					<div class="tile double bg-purple" url="pages_crm/ma_contr">

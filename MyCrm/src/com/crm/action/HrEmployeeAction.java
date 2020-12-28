@@ -14,10 +14,12 @@ import org.apache.struts2.interceptor.ServletResponseAware;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
+import com.crm.biz.CrmContactBiz;
 import com.crm.biz.HrEmployeeBiz;
 import com.crm.biz.SysAppBiz;
 import com.crm.biz.SysLoginBiz;
 import com.crm.biz.SysMenuBiz;
+import com.crm.info.CrmContact;
 import com.crm.info.HrEmployee;
 import com.crm.info.SysLogin;
 import com.crm.tools.Md5;
@@ -192,6 +194,14 @@ public class HrEmployeeAction extends ActionSupport implements
 		this.inpcode = inpcode.trim();
 	}
 
+	
+	// 用于获取联系人总数
+	private CrmContactBiz crmContactBiz;
+	
+	public void setCrmContactBiz(CrmContactBiz crmContactBiz) {
+		this.crmContactBiz = crmContactBiz;
+	}
+
 	/**
 	 * 登录方法 登录成功的用户 Session 的key = 'emp'
 	 * 
@@ -207,6 +217,11 @@ public class HrEmployeeAction extends ActionSupport implements
 					List<SysMenuVobj> menuVobjs = sysMenuBiz.findShowMenusByRole(employee.getSysRole());
 					Scopes.getSessionMap().put("menus", menuVobjs);
 					sysLoginBiz.add(new SysLogin());
+					
+					// 获取联系人总数
+					List<CrmContact> list = crmContactBiz.findAll();
+					Scopes.getSessionMap().put("contNum", list == null ? 0 : list.size());
+					
 					return "login";
 				} else {
 					Scopes.getRequestMap().put("err", "您没有权限登录，请联系管理员");
