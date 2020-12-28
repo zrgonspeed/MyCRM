@@ -34,6 +34,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
 				<h3 id="myModalLabel2" style="color:black;">提示信息</h3>
 			</div>
+			
+			<div class="modal-body" >
+				<p id="errmsg" style="color:black;"></p>
+			</div>
 			 
 			<div class="modal-footer">
 				<button data-dismiss="modal" class="btn green">取消</button>
