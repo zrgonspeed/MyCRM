@@ -218,10 +218,6 @@ public class HrEmployeeAction extends ActionSupport implements
 					Scopes.getSessionMap().put("menus", menuVobjs);
 					sysLoginBiz.add(new SysLogin());
 					
-					// 获取联系人总数
-					List<CrmContact> list = crmContactBiz.findAll();
-					Scopes.getSessionMap().put("contNum", list == null ? 0 : list.size());
-					
 					return "login";
 				} else {
 					Scopes.getRequestMap().put("err", "您没有权限登录，请联系管理员");

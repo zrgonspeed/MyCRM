@@ -159,7 +159,7 @@
 						</div>
 						<div class="tile-object">
 							<div class="name">我的联系人</div>
-							<div class="number">${contNum}</div>
+							<div class="number" id="contNum">-1</div>
 						</div>
 					</div>
 					<div class="tile double bg-purple" url="pages_crm/ma_contr">
@@ -292,6 +292,15 @@
 			$('.tile').click(function(){
 				var url=$(this).attr('url');
 				location.href=url;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			// 获取联系人总数
+			var url = "pages_crm/crm_cont!ajaxGetContNum";
+			$.getJSON(url, function(data) {
+				$('#contNum').text(data);
 			});
 		});
 	</script>

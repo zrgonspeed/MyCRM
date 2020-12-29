@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import com.crm.biz.CrmContactBiz;
 import com.crm.info.CrmContact;
 import com.crm.tools.Scopes;
+import com.crm.tools.WebTools;
 import com.crm.vobj.CrmContactVobj;
 import com.opensymphony.xwork2.ActionSupport;
 @Scope("prototype")
@@ -50,6 +51,19 @@ public class CrmContactAction extends ActionSupport {
 		List<CrmContact> list = crmContactBiz.findAllByWhere(contactvobj);
 		Scopes.getRequestMap().put("listx", list);
 		return SUCCESS;
+	}
+	
+	/**
+	 * 获取联系人总数
+	 * @return
+	 */
+	public String ajaxGetContNum() {
+		List<CrmContact> list = crmContactBiz.findAllByWhere(contactvobj);
+		String data = WebTools.convertJson(list == null ? 0 : list.size());
+		Scopes.getSessionMap().put("data", data);
+		
+		System.out.println("我的桌面:我的联系人数: " + data);
+		return "ajax";
 	}
 	
 	public String getList() {
