@@ -30,6 +30,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<jsp:include page="/main_pages/top.jsp"></jsp:include>
 	<!-- BEGIN 容器 -->
 	<div class="page-container row-fluid">
+		<jsp:include page="/main_pages/left.jsp"></jsp:include>
 		<!-- BEGIN 开始页面 -->
 		<div class="page-content">
 			<!-- ---------------------------------------------- -->
