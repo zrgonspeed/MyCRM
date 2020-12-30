@@ -87,7 +87,7 @@ public class CrmContractBiz {
 	public boolean deleteFalse(int id) {
 		CrmContract contract = crmContractDao.get(id);
 		if(contract==null) return false;
-		contract.setIsdelete(0);//0¾ÍÊÇÒÑÉ¾³ý
+		contract.setIsdelete(0);//0å°±æ˜¯å·²åˆ é™¤
 		contract.setDeleteTime(new Timestamp(new Date().getTime()));
 		try {
 			crmContractDao.save(contract);
@@ -104,7 +104,7 @@ public class CrmContractBiz {
 	public boolean doTrashAll(int id) {
 		CrmContract contract = crmContractDao.get(id);
 		if(contract==null) return false;
-		contract.setIsdelete(1);//0¾ÍÊÇÒÑÉ¾³ý
+		contract.setIsdelete(1);//0å°±æ˜¯å·²åˆ é™¤
 		contract.setDeleteTime(null);
 		try {
 			crmContractDao.save(contract);

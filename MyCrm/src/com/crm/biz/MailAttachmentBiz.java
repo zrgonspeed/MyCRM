@@ -48,7 +48,7 @@ public class MailAttachmentBiz {
 		this.mailFlowBiz = mailFlowBiz;
 	}
 	/**
-	 * É¾³ıÓÊ¼şÇ°É¾³ı¸½¼ş
+	 * åˆ é™¤é‚®ä»¶å‰åˆ é™¤é™„ä»¶
 	 * @param id
 	 * @throws Exception 
 	 */
@@ -59,7 +59,7 @@ public class MailAttachmentBiz {
 		while (iterator.hasNext()) {
 			MailAttachment delid = (MailAttachment) iterator.next();
 			/*String path=ServletActionContext.getServletContext().getRealPath("/main_pages/mailUploadFiles");
-			File f = new File(path+"\\"+delid.getRealName());  // ÊäÈëÒªÉ¾³ıµÄÎÄ¼şÎ»ÖÃ
+			File f = new File(path+"\\"+delid.getRealName());  // è¾“å…¥è¦åˆ é™¤çš„æ–‡ä»¶ä½ç½®
 			if(f.exists()){
 				f.delete();
 			}*/

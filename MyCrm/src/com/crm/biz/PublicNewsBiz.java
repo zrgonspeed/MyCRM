@@ -16,8 +16,8 @@ import com.crm.info.PublicNews;
 import com.haha.hibernate.HibernateDao;
 
 /**
- * ¹«¹²ĞÂÎÅ±í
- * @author ¿­
+ * å…¬å…±æ–°é—»è¡¨
+ * @author å‡¯
  *
  */
 @Transactional
@@ -36,7 +36,7 @@ public class PublicNewsBiz {
 	}
 	public boolean deleteFalse(int id){
 		PublicNews c = publicNewsDao.get(id);
-		c.setIsdelete(0);//0¾ÍÊÇÒÑÉ¾³ı
+		c.setIsdelete(0);//0å°±æ˜¯å·²åˆ é™¤
 		c.setDeleteTime(new Date());	
 		try {
 			publicNewsDao.save(c);
@@ -46,11 +46,11 @@ public class PublicNewsBiz {
 			return false;
 		}
 	}
-	//µ¥²é
+	//å•æŸ¥
 	public PublicNews findOne(int id) {
 		return publicNewsDao.get(id);
 	}
-	//ĞŞ¸Ä
+	//ä¿®æ”¹
 	public boolean update(PublicNews news) {
 		PublicNews c=publicNewsDao.get(news.getId());
 		c.setNewsTitle(news.getNewsTitle());
@@ -66,7 +66,7 @@ public class PublicNewsBiz {
 			return false;
 		}
 	}
-	//Ìí¼Ó
+	//æ·»åŠ 
 	public boolean addNews(PublicNews publicNews){
 		publicNews.setIsdelete(1);
 		publicNews.setViewNum(0);

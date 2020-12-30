@@ -3,18 +3,18 @@ package com.crm.vobj;
 import java.util.Date;
 
 public class CrmCustomeVobj {
-	private String customer;//¹«Ë¾Ãû
-	private Integer departmentId;//²¿ÃÅID
-	private Integer employeeId;//Ô±¹¤ID
-	private String tel;//µç»°
-	private Date createDateStart;//´´½¨ÆğÊ¼Ê±¼ä
-	private Date createDateEnd;//´´½¨½áÊøÊ±¼ä
-	private Integer provincesId;//Ê¡·İID
-	private Integer cityId;//³ÇÊĞID
-	private Date lastfollowStart;//¸ú½øÆğÊ¼Ê±¼ä
-	private Date lastfollowEnd;//¸ú½ø½áÊøÊ±¼ä
-	private Integer customertypeId;//Ô±¹¤ÀàĞÍID
-	private Integer customerlevelId;//Ô±¹¤Àà±ğID
+	private String customer;//å…¬å¸å
+	private Integer departmentId;//éƒ¨é—¨ID
+	private Integer employeeId;//å‘˜å·¥ID
+	private String tel;//ç”µè¯
+	private Date createDateStart;//åˆ›å»ºèµ·å§‹æ—¶é—´
+	private Date createDateEnd;//åˆ›å»ºç»“æŸæ—¶é—´
+	private Integer provincesId;//çœä»½ID
+	private Integer cityId;//åŸå¸‚ID
+	private Date lastfollowStart;//è·Ÿè¿›èµ·å§‹æ—¶é—´
+	private Date lastfollowEnd;//è·Ÿè¿›ç»“æŸæ—¶é—´
+	private Integer customertypeId;//å‘˜å·¥ç±»å‹ID
+	private Integer customerlevelId;//å‘˜å·¥ç±»åˆ«ID
 	public String getCustomer() {
 		return customer;
 	}

@@ -29,7 +29,7 @@ public class MailFlowBiz {
 	}
 
 	/**
-	 * °´ÕÕµ±Ç°ÓÃ»§²éÑ¯ËûµÄĞÂÓÊ¼ş
+	 * æŒ‰ç…§å½“å‰ç”¨æˆ·æŸ¥è¯¢ä»–çš„æ–°é‚®ä»¶
 	 * @param info 
 	 * @return
 	 */
@@ -43,7 +43,7 @@ public class MailFlowBiz {
 		return mailFlowDao.getNewMailCount(employee);
 	}
 	/**
-	 * ²éÑ¯µ±Ç°ÓÃ»§µÄÈ«²¿ÓÊ¼ş
+	 * æŸ¥è¯¢å½“å‰ç”¨æˆ·çš„å…¨éƒ¨é‚®ä»¶
 	 * @return
 	 */
 	public List<MailFlow> loadAllMail(PageInfo pi){
@@ -51,7 +51,7 @@ public class MailFlowBiz {
 		return mailFlowDao.loadAllMail(employee,pi);
 	}
 	/**
-	 * ²éÑ¯µ±Ç°ÓÃ»§µÄÒÑÉ¾³ıÓÊ¼ş
+	 * æŸ¥è¯¢å½“å‰ç”¨æˆ·çš„å·²åˆ é™¤é‚®ä»¶
 	 * @return
 	 */
 	public List<MailFlow> loadTrashMail(PageInfo pi){
@@ -59,7 +59,7 @@ public class MailFlowBiz {
 		return mailFlowDao.loadTrashMail(employee,pi);
 	}
 	/**
-	 * ²éÑ¯µ±Ç°ÓÃ»§µÄĞÇ±êÓÊ¼ş   id  52
+	 * æŸ¥è¯¢å½“å‰ç”¨æˆ·çš„æ˜Ÿæ ‡é‚®ä»¶   id  52
 	 * @return
 	 */
 	public List<MailFlow> loadStarMail(PageInfo pi){
@@ -67,7 +67,7 @@ public class MailFlowBiz {
 		return mailFlowDao.loadStarMail(employee,pi);
 	}
 	/**
-	 * ²éÑ¯µ±Ç°ÓÃ»§µÄ·¢ËÍÓÊ¼ş
+	 * æŸ¥è¯¢å½“å‰ç”¨æˆ·çš„å‘é€é‚®ä»¶
 	 * @return
 	 */
 	public List<MailFlow> loadSendMail(PageInfo pi){
@@ -103,7 +103,7 @@ public class MailFlowBiz {
 		}
 	}
 	/**
-	 * µ¥²é
+	 * å•æŸ¥
 	 * @param id
 	 * @return
 	 */
@@ -111,7 +111,7 @@ public class MailFlowBiz {
 		return mailFlowDao.get(id);
 	}
 	/**
-	 * ¼ÙÉ¾³ı
+	 * å‡åˆ é™¤
 	 * @param id
 	 * @return
 	 */
@@ -128,13 +128,13 @@ public class MailFlowBiz {
 		}
 	}
 	/**
-	 * É¾³ı
+	 * åˆ é™¤
 	 * @param id
 	 * @return
 	 */
 	public boolean delete(int id) {
 		try {
-			//É¾³ıÓÊ¼şÇ° É¾³ıÆ÷¸½¼ş
+			//åˆ é™¤é‚®ä»¶å‰ åˆ é™¤å™¨é™„ä»¶
 			mailAttachmentBiz.deleteChildAttach(id);
 			mailFlowDao.delete(id);
 			return true;
@@ -144,7 +144,7 @@ public class MailFlowBiz {
 		}
 	}
 	/**
-	 * ÉèÖÃµ±Ç°×´Ì¬ÎªÒÑ¶Á
+	 * è®¾ç½®å½“å‰çŠ¶æ€ä¸ºå·²è¯»
 	 * @param id
 	 * @return
 	 */
@@ -164,7 +164,7 @@ public class MailFlowBiz {
 		}
 	}
 	/**
-	 * ÉèÖÃÎªĞÇ±êÓÊ¼ş
+	 * è®¾ç½®ä¸ºæ˜Ÿæ ‡é‚®ä»¶
 	 * @param id
 	 * @return
 	 */

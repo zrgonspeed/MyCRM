@@ -17,11 +17,11 @@ public class PageInfo {
 		return pageSize*pageIndex;
 	}
 	public void computePageCount(){
-		//¼ÆËã×ÜÒ³Êý
+		//è®¡ç®—æ€»é¡µæ•°
 		pageCount=recordCount/pageSize;
 		if(recordCount%pageSize!=0)
 			pageCount++;
-		//Ð£Õýµ±Ç°Ò³Âë		
+		//æ ¡æ­£å½“å‰é¡µç 		
 		if(pageIndex>pageCount-1) pageIndex=pageCount-1;
 		if(pageIndex<0) pageIndex=0;
 	}

@@ -37,7 +37,7 @@ public class ParamSysparamAction extends ActionSupport {
 	}
 	
 	/**
-	 * ½ÓÊÕµ½ParamSysparamTypeActionµÄÀàĞÍ  ²¢È«²é×ÓÀàĞÍ 
+	 * æ¥æ”¶åˆ°ParamSysparamTypeActionçš„ç±»å‹  å¹¶å…¨æŸ¥å­ç±»å‹ 
 	 * @return
 	 */
 	public String findSysParam(){

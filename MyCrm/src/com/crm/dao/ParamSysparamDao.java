@@ -9,8 +9,8 @@ import com.crm.info.ParamSysparam;
 import com.haha.hibernate.HibernateDao;
 
 /**
- * ÏµÍ³²ÎÊı×Ó·ÖÀà±í
- * @author ¿­
+ * ç³»ç»Ÿå‚æ•°å­åˆ†ç±»è¡¨
+ * @author å‡¯
  *
  */
 @Repository("paramSysparamDao")

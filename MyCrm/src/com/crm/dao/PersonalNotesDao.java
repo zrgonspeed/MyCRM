@@ -6,8 +6,8 @@ import com.crm.info.PersonalNotes;
 import com.haha.hibernate.HibernateDao;
 
 /**
- * ¸öÈË±ãÇ©±í
- * @author ¿­
+ * ä¸ªäººä¾¿ç­¾è¡¨
+ * @author å‡¯
  *
  */
 @Repository("personalNotesDao")

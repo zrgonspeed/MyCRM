@@ -10,8 +10,8 @@ import com.crm.info.CrmProduct;
 import com.haha.hibernate.HibernateDao;
 
 /**
- * ¿Í»§¶©µ¥ÏêÏ¸±í
- * @author ¿­
+ * å®¢æˆ·è®¢å•è¯¦ç»†è¡¨
+ * @author å‡¯
  *
  */
 @Repository("crmOrderDetailsDao")

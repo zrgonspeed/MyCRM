@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 import com.crm.info.ParamSysparamType;
 import com.haha.hibernate.HibernateDao;
 /**
- * ÏµÍ³²ÎÊıÒ»¼¶·ÖÀà±í
- * @author ¿­
+ * ç³»ç»Ÿå‚æ•°ä¸€çº§åˆ†ç±»è¡¨
+ * @author å‡¯
  *
  */
 @Repository("paramSysparamTypeDao")

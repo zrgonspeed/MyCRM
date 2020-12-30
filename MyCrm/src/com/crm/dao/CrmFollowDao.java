@@ -12,8 +12,8 @@ import com.crm.info.CrmFollow;
 import com.crm.vobj.CrmFollowVobj;
 import com.haha.hibernate.HibernateDao;
 /**
- * ¿Í»§¸ú½ø±í
- * @author ¿­
+ * å®¢æˆ·è·Ÿè¿›è¡¨
+ * @author å‡¯
  *
  */
 @Repository("crmFollowDao")
@@ -34,27 +34,27 @@ public class CrmFollowDao  extends HibernateDao<CrmFollow, Integer >{
 	private Criteria createCriter(Session s, CrmFollowVobj cy) {
 		Criteria c = s.createCriteria(CrmFollow.class);
 		if (cy.getCustomerId() != null && cy.getCustomerId() > 0) {
-			// ¹«Ë¾²»Îª¿Õ
+			// å…¬å¸ä¸ä¸ºç©º
 			c.add(Restrictions.eq("crmCustomer.id", cy.getCustomerId()));
 		}
 		if (cy.getDepartmentId() != null && cy.getDepartmentId() > 0) {
-			// ÒµÎñ²¿ÃÅ²»Îª¿Õ
+			// ä¸šåŠ¡éƒ¨é—¨ä¸ä¸ºç©º
 			c.add(Restrictions.eq("hrDepartment.id", cy.getDepartmentId()));
 		}
 		if (cy.getEmployeeId() != null && cy.getEmployeeId() > 0) {
-			// ÒµÎñÔ±²»Îª¿Õ
+			// ä¸šåŠ¡å‘˜ä¸ä¸ºç©º
 			c.add(Restrictions.eq("hrEmployee.id", cy.getEmployeeId()));
 		}
 		if (cy.getStartfollowdate() != null) {
-			//Ç©¶©Ê±¼ä¿ªÊ¼
+			//ç­¾è®¢æ—¶é—´å¼€å§‹
 			c.add(Restrictions.ge("followDate", cy.getStartfollowdate()));
 		}
 		if (cy.getEndfollowdate() != null) {
-			//Ç©¶©Ê±¼ä½áÊø
+			//ç­¾è®¢æ—¶é—´ç»“æŸ
 			c.add(Restrictions.le("followDate", cy.getEndfollowdate()));
 		}
 		if (cy.getFollowcontent() != null && cy.getFollowcontent().length() > 0) {
-			// ¸ù½øÄÚÈÝ²»Îª¿Õ
+			// æ ¹è¿›å†…å®¹ä¸ä¸ºç©º
 			c.add(Restrictions.ilike("follow", cy.getFollowcontent(), MatchMode.ANYWHERE));
 		}
 		if (cy.getFollowtype()!=null && cy.getFollowtype() > 0) {

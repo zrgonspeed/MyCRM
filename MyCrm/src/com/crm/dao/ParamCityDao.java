@@ -9,8 +9,8 @@ import com.crm.info.ParamCity;
 import com.haha.hibernate.HibernateDao;
 
 /**
- * Ê¡ÊĞ²ÎÊıÑ¡Ïî±í
- * @author ¿­
+ * çœå¸‚å‚æ•°é€‰é¡¹è¡¨
+ * @author å‡¯
  *
  */
 @Repository("paramCityDao")

@@ -13,22 +13,22 @@ import javax.servlet.http.HttpSession;
 public class ValidateCode {
 	public static String code;
 	
-    public static final String RANDOMCODEKEY = "RANDOMVALIDATECODEKEY";//·Åµ½sessionÖĞµÄkey
+    public static final String RANDOMCODEKEY = "RANDOMVALIDATECODEKEY";//æ”¾åˆ°sessionä¸­çš„key
     private Random random = new Random();
-    private String randString = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";//Ëæ»ú²úÉúµÄ×Ö·û´®
+    private String randString = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";//éšæœºäº§ç”Ÿçš„å­—ç¬¦ä¸²
     
-    private int width = 85;//Í¼Æ¬¿í
-    private int height = 34;//Í¼Æ¬¸ß
-    private int lineSize = 100;//¸ÉÈÅÏßÊıÁ¿
-    private int stringNum = 4;//Ëæ»ú²úÉú×Ö·ûÊıÁ¿
+    private int width = 85;//å›¾ç‰‡å®½
+    private int height = 34;//å›¾ç‰‡é«˜
+    private int lineSize = 100;//å¹²æ‰°çº¿æ•°é‡
+    private int stringNum = 4;//éšæœºäº§ç”Ÿå­—ç¬¦æ•°é‡
     /*
-     * »ñµÃ×ÖÌå
+     * è·å¾—å­—ä½“
      */
     private Font getFont(){
         return new Font("Fixedsys",Font.CENTER_BASELINE,18);
     }
     /*
-     * »ñµÃÑÕÉ«
+     * è·å¾—é¢œè‰²
      */
     private Color getRandColor(int fc,int bc){
         if(fc > 255)
@@ -41,22 +41,22 @@ public class ValidateCode {
         return new Color(r,g,b);
     }
     /**
-     * Éú³ÉËæ»úÍ¼Æ¬
+     * ç”Ÿæˆéšæœºå›¾ç‰‡
      */
     public String getRandcode(HttpServletRequest request,
             HttpServletResponse response) {
         HttpSession session = request.getSession();
-        //BufferedImageÀàÊÇ¾ßÓĞ»º³åÇøµÄImageÀà,ImageÀàÊÇÓÃÓÚÃèÊöÍ¼ÏñĞÅÏ¢µÄÀà
+        //BufferedImageç±»æ˜¯å…·æœ‰ç¼“å†²åŒºçš„Imageç±»,Imageç±»æ˜¯ç”¨äºæè¿°å›¾åƒä¿¡æ¯çš„ç±»
         BufferedImage image = new BufferedImage(width,height,BufferedImage.TYPE_INT_BGR);
-        Graphics g = image.getGraphics();//²úÉúImage¶ÔÏóµÄGraphics¶ÔÏó,¸Ä¶ÔÏó¿ÉÒÔÔÚÍ¼ÏñÉÏ½øĞĞ¸÷ÖÖ»æÖÆ²Ù×÷
+        Graphics g = image.getGraphics();//äº§ç”ŸImageå¯¹è±¡çš„Graphicså¯¹è±¡,æ”¹å¯¹è±¡å¯ä»¥åœ¨å›¾åƒä¸Šè¿›è¡Œå„ç§ç»˜åˆ¶æ“ä½œ
         g.fillRect(0, 0, width, height);
         g.setFont(new Font("Times New Roman",Font.ROMAN_BASELINE,18));
         g.setColor(getRandColor(110, 133));
-        //»æÖÆ¸ÉÈÅÏß
+        //ç»˜åˆ¶å¹²æ‰°çº¿
         for(int i=0;i<=lineSize;i++){
             drowLine(g);
         }
-        //»æÖÆËæ»ú×Ö·û
+        //ç»˜åˆ¶éšæœºå­—ç¬¦
         String randomString = "";
         for(int i=1;i<=stringNum;i++){
             randomString=drowString(g,randomString,i);
@@ -65,14 +65,14 @@ public class ValidateCode {
         session.setAttribute(RANDOMCODEKEY, randomString);
         g.dispose();
         try {
-            ImageIO.write(image, "JPEG", response.getOutputStream());//½«ÄÚ´æÖĞµÄÍ¼Æ¬Í¨¹ıÁ÷¶¯ĞÎÊ½Êä³öµ½¿Í»§¶Ë
+            ImageIO.write(image, "JPEG", response.getOutputStream());//å°†å†…å­˜ä¸­çš„å›¾ç‰‡é€šè¿‡æµåŠ¨å½¢å¼è¾“å‡ºåˆ°å®¢æˆ·ç«¯
         } catch (Exception e) {
             e.printStackTrace();
         }
         return randomString;
     }
     /*
-     * »æÖÆ×Ö·û´®
+     * ç»˜åˆ¶å­—ç¬¦ä¸²
      */
     private String drowString(Graphics g,String randomString,int i){
         g.setFont(getFont());
@@ -84,7 +84,7 @@ public class ValidateCode {
         return randomString;
     }
     /*
-     * »æÖÆ¸ÉÈÅÏß
+     * ç»˜åˆ¶å¹²æ‰°çº¿
      */
     private void drowLine(Graphics g){
         int x = random.nextInt(width);
@@ -94,7 +94,7 @@ public class ValidateCode {
         g.drawLine(x, y, x+xl, y+yl);
     }
     /*
-     * »ñÈ¡Ëæ»úµÄ×Ö·û
+     * è·å–éšæœºçš„å­—ç¬¦
      */
     public String getRandomString(int num){
         return String.valueOf(randString.charAt(num));

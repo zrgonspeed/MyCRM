@@ -12,9 +12,9 @@ import com.crm.vobj.CrmOrderVobj;
 import com.haha.hibernate.HibernateDao;
 
 /**
- * ¿Í»§¶©µ¥±í
+ * å®¢æˆ·è®¢å•è¡¨
  * 
- * @author ¿­
+ * @author å‡¯
  * 
  */
 @Repository("crmOrderDao")

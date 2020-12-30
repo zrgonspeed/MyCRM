@@ -85,7 +85,7 @@ public class CrmOrderBiz {
 	public boolean deleteFalse(int id) {
 		CrmOrder crmOrder = crmOrderDao.get(id);
 		if(crmOrder==null) return false;
-		crmOrder.setIsdelete(0);//0¾ÍÊÇÒÑÉ¾³ý
+		crmOrder.setIsdelete(0);//0å°±æ˜¯å·²åˆ é™¤
 		crmOrder.setDeleteTime(new Date());
 		try {
 			crmOrderDao.save(crmOrder);
@@ -139,7 +139,7 @@ public class CrmOrderBiz {
 	public boolean doTrashAdd(Integer id) {
 		CrmOrder crmOrder = crmOrderDao.get(id);
 		if(crmOrder==null) return false;
-		crmOrder.setIsdelete(1);//0¾ÍÊÇÒÑÉ¾³ý
+		crmOrder.setIsdelete(1);//0å°±æ˜¯å·²åˆ é™¤
 		crmOrder.setDeleteTime(null);
 		try {
 			crmOrderDao.save(crmOrder);

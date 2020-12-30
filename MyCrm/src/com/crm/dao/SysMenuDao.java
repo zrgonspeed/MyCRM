@@ -8,15 +8,15 @@ import org.springframework.stereotype.Repository;
 import com.crm.info.SysMenu;
 import com.haha.hibernate.HibernateDao;
 /**
- * ÏµÍ³²Ëµ¥±í
- * @author ¿­
+ * ç³»ç»Ÿèœå•è¡¨
+ * @author å‡¯
  *
  */
 @Repository("sysMenuDao")
 public class SysMenuDao extends HibernateDao<SysMenu, Integer> {
 
 	/**
-	 * »ñÈ¡µ±Ç°ÓÃ»§¶ÔÓ¦½ÇÉ«È¨ÏŞÏÂËùÓĞ²Ëµ¥
+	 * è·å–å½“å‰ç”¨æˆ·å¯¹åº”è§’è‰²æƒé™ä¸‹æ‰€æœ‰èœå•
 	 * @param menuids
 	 * @return
 	 */

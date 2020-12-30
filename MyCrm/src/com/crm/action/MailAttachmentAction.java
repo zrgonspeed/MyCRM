@@ -29,11 +29,11 @@ public class MailAttachmentAction extends ActionSupport {
 	public void setMailAttachmentBiz(MailAttachmentBiz mailAttachmentBiz) {
 		this.mailAttachmentBiz = mailAttachmentBiz;
 	}
-	private File uploadify;//ÉÏ´«ÎÄ¼şfile¶ÔÏó  
-	private String uploadifyFileName;//ÉÏ´«ÎÄ¼şÃû  
-	private String uploadifyContentType;//ÉÏ´«ÎÄ¼şÀàĞÍ  
-	private String description;//ÉÏ´«ÎÄ¼şµÄÃèÊö  
-	private String uploadDir;//±£´æÉÏ´«ÎÄ¼şµÄÄ¿Â¼,Ïà¶ÔÓÚwebÓ¦ÓÃ³ÌĞòµÄ¸ùÂ·¾¶,ÔÚstruts.xmlÎÄ¼şÖĞÅäÖÃ  
+	private File uploadify;//ä¸Šä¼ æ–‡ä»¶fileå¯¹è±¡  
+	private String uploadifyFileName;//ä¸Šä¼ æ–‡ä»¶å  
+	private String uploadifyContentType;//ä¸Šä¼ æ–‡ä»¶ç±»å‹  
+	private String description;//ä¸Šä¼ æ–‡ä»¶çš„æè¿°  
+	private String uploadDir;//ä¿å­˜ä¸Šä¼ æ–‡ä»¶çš„ç›®å½•,ç›¸å¯¹äºwebåº”ç”¨ç¨‹åºçš„æ ¹è·¯å¾„,åœ¨struts.xmlæ–‡ä»¶ä¸­é…ç½®  
 	private String downFileName;
 
 	public String getDownFileName() {
@@ -46,20 +46,20 @@ public class MailAttachmentAction extends ActionSupport {
 
 	public String execute() {
 		String newFileName=null;  
-		//µÃµ½µ±Ç°Ê±¼ä¿ªÊ¼Á÷ÊÅµÄºÁÃëÊı,½«Õâ¸öºÁÃëÊı×÷ÎªÉÏ´«ÎÄ¼şĞÂµÄÎÄ¼şÃû  
+		//å¾—åˆ°å½“å‰æ—¶é—´å¼€å§‹æµé€çš„æ¯«ç§’æ•°,å°†è¿™ä¸ªæ¯«ç§’æ•°ä½œä¸ºä¸Šä¼ æ–‡ä»¶æ–°çš„æ–‡ä»¶å  
 		long now=new Date().getTime();
 		DateFormat df=new SimpleDateFormat("yyyyMMddHHmmss");
 		String currentDateTime=df.format(new Date()); 
-		//µÃµ½±£´æÉÏ´«ÎÄ¼şµÄÕæÊµÂ·¾¶  
+		//å¾—åˆ°ä¿å­˜ä¸Šä¼ æ–‡ä»¶çš„çœŸå®è·¯å¾„  
 		String path=ServletActionContext.getServletContext().getRealPath(uploadDir);  
 		File dir=new File(path);  
-		//Èç¹ûÕâ¸öÄ¿Â¼²»´æÔÚ,Ôò´´½¨Ëü
+		//å¦‚æœè¿™ä¸ªç›®å½•ä¸å­˜åœ¨,åˆ™åˆ›å»ºå®ƒ
 		if (!dir.exists()) {
 		    dir.mkdir();
 		}  
 		int index=uploadifyFileName.lastIndexOf(".");  
 		
-		//ÅĞ¶ÏÉÏ´«ÎÄ¼şÊÇ·ñÓĞÀ©Õ¹Ãû,ÒÔÊ±¼ä´Á×÷ÎªĞÂµÄÎÄ¼şÃû
+		//åˆ¤æ–­ä¸Šä¼ æ–‡ä»¶æ˜¯å¦æœ‰æ‰©å±•å,ä»¥æ—¶é—´æˆ³ä½œä¸ºæ–°çš„æ–‡ä»¶å
 		if (index!=-1) {  
 		    newFileName=currentDateTime+Long.valueOf(now)+uploadifyFileName.substring(index);  
 		}else {  
@@ -68,7 +68,7 @@ public class MailAttachmentAction extends ActionSupport {
 		BufferedOutputStream bos=null;  
 		BufferedInputStream bis=null;  
 		  
-		//¶ÁÈ¡±£´æÔÚÁÙÊ±Ä¿Â¼ÏÂµÄÉÏ´«ÎÄ¼ş,Ğ´Èëµ½ĞÂµÄÎÄ¼şÖĞ  
+		//è¯»å–ä¿å­˜åœ¨ä¸´æ—¶ç›®å½•ä¸‹çš„ä¸Šä¼ æ–‡ä»¶,å†™å…¥åˆ°æ–°çš„æ–‡ä»¶ä¸­  
 		String data="";
 		try {  
 		    FileInputStream fis=new FileInputStream(uploadify);  
@@ -83,7 +83,7 @@ public class MailAttachmentAction extends ActionSupport {
 		        bos.write(buf,0,len);  
 		    }
 		    String realPath="mail_atta!down?downFileName="+newFileName;
-		    //¸úĞÂÊı¾İ¿â
+		    //è·Ÿæ–°æ•°æ®åº“
 		    data = mailAttachmentBiz.addAttachment(newFileName,uploadifyFileName,realPath);
 		} catch (FileNotFoundException e) {  
 		    e.printStackTrace();

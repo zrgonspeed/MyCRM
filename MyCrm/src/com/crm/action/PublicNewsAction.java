@@ -21,13 +21,13 @@ public class PublicNewsAction extends ActionSupport {
 	public void setPublicNewsBiz(PublicNewsBiz publicNewsBiz) {
 		this.publicNewsBiz = publicNewsBiz;
 	}
-	//全查
+	//鍏ㄦ煡
 	public String execute() {
 		ActionContext a=ActionContext.getContext();
 		a.put("listx", publicNewsBiz.findAll());
 		return SUCCESS;
 	}
-	//删除
+	//鍒犻櫎
 	private PublicNews news;
 	public PublicNews getNews() {
 		return news;
@@ -39,18 +39,18 @@ public class PublicNewsAction extends ActionSupport {
 		publicNewsBiz.deleteFalse(news.getId());
 		return "up_ok";
 	}
-	//修改单查
+	//淇敼鍗曟煡
 	public String findOne() {
 		ActionContext a=ActionContext.getContext();
 		a.put("one", publicNewsBiz.findOne(news.getId()));
 		return "ones";
 	}
-	//修改
+	//淇敼
 	public String update() {
 		publicNewsBiz.update(news);
 		return "up_ok";
 	}
-	//添加
+	//娣诲姞
 	public String addNews(){
 		publicNewsBiz.addNews(news);
 		return "up_ok";

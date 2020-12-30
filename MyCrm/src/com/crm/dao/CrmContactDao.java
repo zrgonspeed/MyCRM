@@ -13,9 +13,9 @@ import com.crm.vobj.CrmContactVobj;
 import com.haha.hibernate.HibernateDao;
 
 /**
- * ÁªÏµÈË±í
+ * è”ç³»äººè¡¨
  * 
- * @author ¿­
+ * @author å‡¯
  * 
  */
 @Repository("crmContactDao")
@@ -33,15 +33,15 @@ public class CrmContactDao extends HibernateDao<CrmContact, Integer>  {
 	private Criteria createCriter(Session s, CrmContactVobj cy) {
 		Criteria c=s.createCriteria(CrmContact.class);
 		if(cy.getCustomerId() != null && cy.getCustomerId() > 0){
-			//¹«Ë¾²»Îª¿Õ
+			//å…¬å¸ä¸ä¸ºç©º
 			c.add(Restrictions.eq("crmCustomer.id",cy.getCustomerId()));
 		}
 		if(cy.getCname()!=null && cy.getCname().length()>0){
-			//ÁªÏµÈË²»Îª¿Õ
+			//è”ç³»äººä¸ä¸ºç©º
 			c.add(Restrictions.ilike("CName",cy.getCname(),MatchMode.ANYWHERE));
 		}
 		if(cy.getCqq()!=null && cy.getCqq().length()>0){
-			//QQ²»Îª¿Õ
+			//QQä¸ä¸ºç©º
 			c.add(Restrictions.ilike("CQq",cy.getCqq(),MatchMode.ANYWHERE));
 		}
 		if(cy.getcCreatedateStart()!=null){
@@ -51,7 +51,7 @@ public class CrmContactDao extends HibernateDao<CrmContact, Integer>  {
 			c.add(Restrictions.le("CCreatedate", cy.getcCreatedateEnd()));
 		}
 		if(cy.getCmob()!=null && cy.getCmob().length()>0){
-			//ÊÖ»ú²»Îª¿Õ
+			//æ‰‹æœºä¸ä¸ºç©º
 			c.add(Restrictions.ilike("CMob",cy.getCmob(),MatchMode.ANYWHERE));
 		}
 		return c;

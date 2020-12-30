@@ -33,7 +33,7 @@ public class HrPositionAction extends ActionSupport {
 		this.id = id;
 	}
 	/**
-	 * Ô¤É¾³ý  
+	 * é¢„åˆ é™¤  
 	 * @return
 	 */
 	public String deleteById(){
@@ -49,7 +49,7 @@ public class HrPositionAction extends ActionSupport {
 		return position;
 	}
 	/**
-	 * ÐÞ¸Ä  
+	 * ä¿®æ”¹  
 	 * @return
 	 */
 	public String update(){
@@ -62,7 +62,7 @@ public class HrPositionAction extends ActionSupport {
 		return "findOne";
 	}
 	/**
-	 * Ôö¼Ó  
+	 * å¢žåŠ   
 	 * @return
 	 */
 	public String add(){

@@ -42,7 +42,7 @@ public class CrmProductAction extends ActionSupport {
 	
 	public String findOne(){
 		Scopes.getRequestMap().put("categs", crmProductBiz.findAllCategList());
-		if (id > 0) {//ÐÞ¸Ä
+		if (id > 0) {//ä¿®æ”¹
 			Scopes.getRequestMap().put("onepro", crmProductBiz.findOne(id));
 			return "findone";
 		}

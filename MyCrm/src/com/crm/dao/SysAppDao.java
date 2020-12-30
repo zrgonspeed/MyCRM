@@ -5,8 +5,8 @@ import org.springframework.stereotype.Repository;
 import com.crm.info.SysApp;
 import com.haha.hibernate.HibernateDao;
 /**
- * ÏµÍ³Ó¦ÓÃÄ£¿é
- * @author ¿­
+ * ç³»ç»Ÿåº”ç”¨æ¨¡å—
+ * @author å‡¯
  *
  */
 @Repository("sysAppDao")

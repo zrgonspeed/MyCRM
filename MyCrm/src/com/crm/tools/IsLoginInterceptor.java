@@ -7,8 +7,8 @@ import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
 /**
- * ¼ì²éÊÇ·ñµÇÂ¼À¹½ØÆ÷
- * @author ¿­
+ * æ£€æŸ¥æ˜¯å¦ç™»å½•æ‹¦æˆªå™¨
+ * @author å‡¯
  *
  */
 public class IsLoginInterceptor extends AbstractInterceptor {
@@ -16,7 +16,7 @@ public class IsLoginInterceptor extends AbstractInterceptor {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * À¹½Ø·½·¨
+	 * æ‹¦æˆªæ–¹æ³•
 	 */
 	@Override
 	public String intercept(ActionInvocation invocation) throws Exception {

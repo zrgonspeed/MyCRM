@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 import com.crm.info.HrDepartment;
 import com.haha.hibernate.HibernateDao;
 /**
- * ²¿ÃÅ±í
- * @author ¿­
+ * éƒ¨é—¨è¡¨
+ * @author å‡¯
  *
  */
 @Repository("hrDepartmentDao")

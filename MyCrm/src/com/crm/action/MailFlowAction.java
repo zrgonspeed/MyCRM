@@ -39,7 +39,7 @@ public class MailFlowAction extends ActionSupport {
 		this.emps = emps;
 	}
 	private MailFlow mailflow;
-	private int index;//“≥¬Î
+	private int index;//È°µÁ†Å
 	
 	public void setIndex(int index) {
 		this.index = index;

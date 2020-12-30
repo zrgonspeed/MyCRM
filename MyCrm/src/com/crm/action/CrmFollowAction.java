@@ -34,7 +34,7 @@ public class CrmFollowAction extends ActionSupport {
 	}
 	
 	public String execute() {
-		if (id < 1) {//ÕâÖÖÇé¿öÊÇÌí¼ÓºóÌø×ªµ½ Ö¸¶¨ID¿Í»§ µÄ¸ú½ø
+		if (id < 1) {//è¿™ç§æƒ…å†µæ˜¯æ·»åŠ åŽè·³è½¬åˆ° æŒ‡å®šIDå®¢æˆ· çš„è·Ÿè¿›
 			id=WebTools.follow_custid;
 		}
 		List<CrmFollow> follows = crmFollowBiz.findAllByCusId(id);
@@ -44,13 +44,13 @@ public class CrmFollowAction extends ActionSupport {
 	}
 	
 	public String addFollow(){
-		//Èç¹ûfollow.idÊÇnull ÄÇ¾ÍÊÇÌí¼Ó
+		//å¦‚æžœfollow.idæ˜¯null é‚£å°±æ˜¯æ·»åŠ 
 		if (follow.getId() == null || follow.getId() < 1) {
 			crmFollowBiz.addFollow(follow);
-		}else{//·´Õý¾ÍÊÇÐÞ¸Ä
+		}else{//åæ­£å°±æ˜¯ä¿®æ”¹
 			crmFollowBiz.updateFollow(follow);
 		}
-		WebTools.follow_custid=follow.getCrmCustomer().getId();//±£´æÌí¼Óµ±Ç°µÄ¿Í»§ ID
+		WebTools.follow_custid=follow.getCrmCustomer().getId();//ä¿å­˜æ·»åŠ å½“å‰çš„å®¢æˆ· ID
 		return "add";
 	}
 	public String delete(){

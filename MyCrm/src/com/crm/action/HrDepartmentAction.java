@@ -38,7 +38,7 @@ public class HrDepartmentAction extends ActionSupport {
 		this.id = id;
 	}
 	/**
-	 * Ô¤É¾³ý  
+	 * é¢„åˆ é™¤  
 	 * @return
 	 */
 	public String deleteById(){
@@ -56,7 +56,7 @@ public class HrDepartmentAction extends ActionSupport {
 	}
 
 	/**
-	 * ÐÞ¸Ä  
+	 * ä¿®æ”¹  
 	 * @return
 	 */
 	public String update(){
@@ -69,7 +69,7 @@ public class HrDepartmentAction extends ActionSupport {
 		return "findOne";
 	}
 	/**
-	 * Ôö¼Ó  
+	 * å¢žåŠ   
 	 * @return
 	 */
 	public String add(){

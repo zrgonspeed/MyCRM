@@ -12,11 +12,11 @@ public class EasyUiPage {
 	
 	public static PageInfo createEasyuiPage(String page,String rows){
 		int pageSize,pageIndex;
-		 //µ±Ç°Ò³  
+		 //å½“å‰é¡µ  
 		pageIndex = Integer.parseInt((page == null || page == "0") ? "1":page);  
-        //Ã¿Ò³ÏÔÊ¾ÌõÊı  
+        //æ¯é¡µæ˜¾ç¤ºæ¡æ•°  
         pageSize = Integer.parseInt((rows == null || rows == "0") ? "5":rows);  
-        //Ã¿Ò³µÄ¿ªÊ¼¼ÇÂ¼  µÚÒ»Ò³Îª1  µÚ¶şÒ³Îªnumber +1
+        //æ¯é¡µçš„å¼€å§‹è®°å½•  ç¬¬ä¸€é¡µä¸º1  ç¬¬äºŒé¡µä¸ºnumber +1
         
 		PageInfo pi=new PageInfo(pageSize, pageIndex);
 		
@@ -24,12 +24,12 @@ public class EasyUiPage {
 	}
 	
 	public static String getJsonString(int recordcount,Object list){
-		Map<String, Object> jsonMap = new HashMap<String, Object>();	//¶¨Òåmap  
-		jsonMap.put("total", recordcount);	//total¼ü ´æ·Å×Ü¼ÇÂ¼Êı£¬±ØĞëµÄ  	
-        jsonMap.put("rows", list);//rows¼ü ´æ·ÅÃ¿Ò³¼ÇÂ¼ list 	
+		Map<String, Object> jsonMap = new HashMap<String, Object>();	//å®šä¹‰map  
+		jsonMap.put("total", recordcount);	//totalé”® å­˜æ”¾æ€»è®°å½•æ•°ï¼Œå¿…é¡»çš„  	
+        jsonMap.put("rows", list);//rowsé”® å­˜æ”¾æ¯é¡µè®°å½• list 	
         
 		try {
-			String result = JSONUtil.serialize(jsonMap);//¸ñÊ½»¯result
+			String result = JSONUtil.serialize(jsonMap);//æ ¼å¼åŒ–result
 			return result;
 		} catch (JSONException e) {
 			e.printStackTrace();

@@ -20,7 +20,7 @@ public class CrmContractAction extends ActionSupport {
 	public void setcrmContractBiz(CrmContractBiz crmContractBiz) {
 		this.crmContractBiz = crmContractBiz;
 	}
-	//ÓÃÓÚĞŞ¸Ä Ìí¼Ó
+	//ç”¨äºä¿®æ”¹ æ·»åŠ 
 	private CrmContract contract;
 	public CrmContract getContract() {
 		return contract;
@@ -29,7 +29,7 @@ public class CrmContractAction extends ActionSupport {
 	public void setContract(CrmContract contract) {
 		this.contract = contract;
 	}
-	//ÓÃÓÚÌõ¼ş²éÑ¯
+	//ç”¨äºæ¡ä»¶æŸ¥è¯¢
 	private CrmContractVobj contractvobj;
 
 	public CrmContractVobj getContractvobj() {
@@ -76,7 +76,7 @@ public class CrmContractAction extends ActionSupport {
 	}
 
 	/**
-	 * Ô¤É¾³ı Òì³£´¦ÀíÓë¶ÔÏó´¦Àí·½·¨´òÔÚ biz ·½·¨Àï Ê¹action ±£³Ö¼ò½à ÈçÒÔÏÂÀı×Ó
+	 * é¢„åˆ é™¤ å¼‚å¸¸å¤„ç†ä¸å¯¹è±¡å¤„ç†æ–¹æ³•æ‰“åœ¨ biz æ–¹æ³•é‡Œ ä½¿action ä¿æŒç®€æ´ å¦‚ä»¥ä¸‹ä¾‹å­
 	 * 
 	 * @return
 	 */

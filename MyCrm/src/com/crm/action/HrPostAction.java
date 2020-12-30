@@ -20,7 +20,7 @@ public class HrPostAction extends ActionSupport {
 		this.hrPostBiz = hrPostBiz;
 	}
 	/**
-	 * Ä¬ÈÏÈ«²é
+	 * é»˜è®¤å…¨æŸ¥
 	 */
 	public String execute() {
 		List<HrPost> list=hrPostBiz.findAll();
@@ -28,7 +28,7 @@ public class HrPostAction extends ActionSupport {
 		return SUCCESS;
 	}
 	/**
-	 * ´«Öµ
+	 * ä¼ å€¼
 	 */
 	private HrPost post;
 	public HrPost getPost() {
@@ -38,7 +38,7 @@ public class HrPostAction extends ActionSupport {
 		this.post = post;
 	}
 	/**
-	 * Ìí¼Ó
+	 * æ·»åŠ 
 	 * @return
 	 */
 	public String add(){
@@ -57,7 +57,7 @@ public class HrPostAction extends ActionSupport {
 		this.id = id;
 	}
 	/**
-	 * ¼ÙÉ¾³ı
+	 * å‡åˆ é™¤
 	 * @return
 	 */
 	public String deleteById(){
@@ -65,7 +65,7 @@ public class HrPostAction extends ActionSupport {
 		return "delete";
 	}
 	/**
-	 * µ¥²é
+	 * å•æŸ¥
 	 * @return
 	 */
 	public String findOne(){

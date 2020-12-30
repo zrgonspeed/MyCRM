@@ -13,14 +13,14 @@ import com.crm.vobj.PageInfo;
 import com.haha.hibernate.HibernateDao;
 
 /**
- * Ô±¹¤ÄÚ²¿ÓÊ¼ş±í
- * @author ¿­
+ * å‘˜å·¥å†…éƒ¨é‚®ä»¶è¡¨
+ * @author å‡¯
  *
  */
 @Repository("mailFlowDao")
 public class MailFlowDao extends HibernateDao<MailFlow, Integer> {
 	/**
-	 * °´ÕÕµ±Ç°ÓÃ»§²éÑ¯ËûµÄĞÂÓÊ¼ş
+	 * æŒ‰ç…§å½“å‰ç”¨æˆ·æŸ¥è¯¢ä»–çš„æ–°é‚®ä»¶
 	 * @param employee
 	 * @param info 
 	 * @return
@@ -47,7 +47,7 @@ public class MailFlowDao extends HibernateDao<MailFlow, Integer> {
 				.setProjection(Projections.rowCount()).uniqueResult().toString());
 	}
 	/**
-	 * ²éÑ¯µ±Ç°ÓÃ»§µÄÈ«²¿ÓÊ¼ş
+	 * æŸ¥è¯¢å½“å‰ç”¨æˆ·çš„å…¨éƒ¨é‚®ä»¶
 	 * @param employee
 	 * @return
 	 */
@@ -64,7 +64,7 @@ public class MailFlowDao extends HibernateDao<MailFlow, Integer> {
 				.setFirstResult(info.getStartRow()).setMaxResults(info.getPageSize()).list();
 	}
 	/**
-	 * ²éÑ¯µ±Ç°ÓÃ»§µÄÒÑÉ¾³ıÓÊ¼ş
+	 * æŸ¥è¯¢å½“å‰ç”¨æˆ·çš„å·²åˆ é™¤é‚®ä»¶
 	 * @param employee
 	 * @return
 	 */
@@ -81,7 +81,7 @@ public class MailFlowDao extends HibernateDao<MailFlow, Integer> {
 				.setFirstResult(info.getStartRow()).setMaxResults(info.getPageSize()).list();
 	}
 	/**
-	 * ²éÑ¯µ±Ç°ÓÃ»§µÄĞÇ±êÓÊ¼ş   id  52
+	 * æŸ¥è¯¢å½“å‰ç”¨æˆ·çš„æ˜Ÿæ ‡é‚®ä»¶   id  52
 	 * @param employee
 	 * @return
 	 */
@@ -100,7 +100,7 @@ public class MailFlowDao extends HibernateDao<MailFlow, Integer> {
 				.setFirstResult(info.getStartRow()).setMaxResults(info.getPageSize()).list();
 	}
 	/**
-	 * ²éÑ¯µ±Ç°ÓÃ»§µÄ·¢ËÍÓÊ¼ş
+	 * æŸ¥è¯¢å½“å‰ç”¨æˆ·çš„å‘é€é‚®ä»¶
 	 * @param employee
 	 * @return
 	 */
@@ -115,7 +115,7 @@ public class MailFlowDao extends HibernateDao<MailFlow, Integer> {
 		.setFirstResult(info.getStartRow()).setMaxResults(info.getPageSize()).list();
 	}
 	/**
-	 * °´Ìõ¼şËÑË÷ ·ÖÒ³²éÑ¯
+	 * æŒ‰æ¡ä»¶æœç´¢ åˆ†é¡µæŸ¥è¯¢
 	 * @param employee
 	 * @param searchname
 	 * @param info

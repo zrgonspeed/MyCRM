@@ -12,8 +12,8 @@ import com.crm.info.CrmInvoice;
 import com.crm.vobj.CrmInvoiceVobj;
 import com.haha.hibernate.HibernateDao;
 /**
- * ¿Í»§·¢Æ±±í
- * @author ¿­
+ * å®¢æˆ·å‘ç¥¨è¡¨
+ * @author å‡¯
  *
  */
 @Repository("crmInvoiceDao")

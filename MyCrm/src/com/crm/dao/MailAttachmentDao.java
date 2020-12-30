@@ -6,8 +6,8 @@ import com.crm.info.MailAttachment;
 import com.haha.hibernate.HibernateDao;
 
 /**
- * Ô±¹¤ÄÚ²¿ÓÊ¼þ¸½¼þ±í
- * @author ¿­
+ * å‘˜å·¥å†…éƒ¨é‚®ä»¶é™„ä»¶è¡¨
+ * @author å‡¯
  *
  */
 @Repository("mailAttachmentDao")

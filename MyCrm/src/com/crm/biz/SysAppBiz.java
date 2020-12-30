@@ -16,14 +16,14 @@ public class SysAppBiz  {
 		this.sysAppDao = sysAppDao;
 	}
 	/**
-	 * ²é³öÒ³ÃæµÄ×ó±ß°´Å¥Ó¦ÓÃ
+	 * æŸ¥å‡ºé¡µé¢çš„å·¦è¾¹æŒ‰é’®åº”ç”¨
 	 * @return
 	 */
 	public List<SysApp> findLeftApp() {	
 		return sysAppDao.findBy("appOrder", 1);
 	}
 	/**
-	 * ²é³öÒ³ÃæÓÒ±ß°´Å¥Ó¦ÓÃ
+	 * æŸ¥å‡ºé¡µé¢å³è¾¹æŒ‰é’®åº”ç”¨
 	 * @return
 	 */
 	public List<SysApp> findRightApp() {

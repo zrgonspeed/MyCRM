@@ -8,8 +8,8 @@ import com.crm.info.PublicNotice;
 import com.haha.hibernate.HibernateDao;
 
 /**
- * ¹«¹²¹«¸æ±í
- * @author ¿­
+ * å…¬å…±å…¬å‘Šè¡¨
+ * @author å‡¯
  *
  */
 @Repository("publicNoticeDao")

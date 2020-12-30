@@ -22,7 +22,7 @@ public class ParamSysparamTypeBiz {
 		this.paramSysparamTypeDao = paramSysparamTypeDao;
 	}
 	/**
-	 * 全查出全部的类型
+	 * 鍏ㄦ煡鍑哄叏閮ㄧ殑绫诲瀷
 	 * @return
 	 */
 	public List<ParamSysparamType> findAllType(){

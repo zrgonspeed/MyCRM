@@ -47,7 +47,7 @@ public class CrmInvoiceAction extends ActionSupport {
 		this.orderid = orderid;
 	}
 	/**
-	 * °´ ¶©µ¥È«²é
+	 * æŒ‰ è®¢å•å…¨æŸ¥
 	 */
 	public String execute() {
 		if (orderid < 1) {
@@ -68,7 +68,7 @@ public class CrmInvoiceAction extends ActionSupport {
 		this.invoicevobj = invoicevobj;
 	}
 	/**
-	 * Ìõ¼şÈ«²é
+	 * æ¡ä»¶å…¨æŸ¥
 	 * @return
 	 */
 	public String findAll(){
@@ -77,7 +77,7 @@ public class CrmInvoiceAction extends ActionSupport {
 		return "findall";
 	}
 	/**
-	 * µ¥²é
+	 * å•æŸ¥
 	 * @return
 	 */
 	public String findOne(){
@@ -92,7 +92,7 @@ public class CrmInvoiceAction extends ActionSupport {
 		return "findadd";
 	}
 	/**
-	 * Ìí¼Ó
+	 * æ·»åŠ 
 	 * @return
 	 */
 	public String add(){
@@ -101,7 +101,7 @@ public class CrmInvoiceAction extends ActionSupport {
 		return "add";
 	}
 	/**
-	 * ĞŞ¸Ä
+	 * ä¿®æ”¹
 	 * @return
 	 */
 	public String update(){

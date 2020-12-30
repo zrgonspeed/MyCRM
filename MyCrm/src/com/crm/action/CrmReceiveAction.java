@@ -82,7 +82,7 @@ public class CrmReceiveAction extends ActionSupport {
 	}
 
 	public String findOne() {
-		//获取订单对象
+		//鑾峰彇璁㈠崟瀵硅薄
 		CrmOrder ord=crmOrderBiz.findOne(orderid);
 		Scopes.getRequestMap().put("order", ord);
 		Scopes.getRequestMap().put("orderid", orderid);

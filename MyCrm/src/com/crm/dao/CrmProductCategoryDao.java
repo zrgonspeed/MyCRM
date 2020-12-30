@@ -12,16 +12,16 @@ import com.crm.vobj.ProductCategory;
 import com.haha.hibernate.HibernateDao;
 
 /**
- * ¿Í»§²úÆ··ÖÀà±í
+ * å®¢æˆ·äº§å“åˆ†ç±»è¡¨
  * 
- * @author ¿­
+ * @author å‡¯
  * 
  */
 @Repository("crmProductCategoryDao")
 public class CrmProductCategoryDao extends
 		HibernateDao<CrmProductCategory, Integer> {
 	/**
-	 * »ñÈ¡ ²úÆ·Ê÷×´½Úµã
+	 * è·å– äº§å“æ ‘çŠ¶èŠ‚ç‚¹
 	 * 
 	 * @return
 	 */
@@ -51,7 +51,7 @@ public class CrmProductCategoryDao extends
 	}
 
 	/**
-	 * ajax ²éÑ¯×ÓÀà±ğ
+	 * ajax æŸ¥è¯¢å­ç±»åˆ«
 	 * 
 	 * @param padid
 	 * @return
@@ -65,7 +65,7 @@ public class CrmProductCategoryDao extends
 	}
 
 	/**
-	 * ajax²éÑ¯È«²¿¸¸Àà±ğ
+	 * ajaxæŸ¥è¯¢å…¨éƒ¨çˆ¶ç±»åˆ«
 	 * 
 	 * @return
 	 */
@@ -76,7 +76,7 @@ public class CrmProductCategoryDao extends
 	}
 
 	/**
-	 * ajax »ñÈ¡×î´óµÄID
+	 * ajax è·å–æœ€å¤§çš„ID
 	 * 
 	 * @return
 	 */
@@ -94,7 +94,7 @@ public class CrmProductCategoryDao extends
 	}
 
 	/**
-	 * ajax ²éÑ¯È«²¿µÄ×Ó½Úµã
+	 * ajax æŸ¥è¯¢å…¨éƒ¨çš„å­èŠ‚ç‚¹
 	 * 
 	 * @return
 	 */

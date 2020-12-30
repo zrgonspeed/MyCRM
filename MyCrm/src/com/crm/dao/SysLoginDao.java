@@ -5,8 +5,8 @@ import org.springframework.stereotype.Repository;
 import com.crm.info.SysLogin;
 import com.haha.hibernate.HibernateDao;
 /**
- * Ô±¹¤ÀúÊ·µÇÂ¼±í
- * @author ¿­
+ * å‘˜å·¥å†å²ç™»å½•è¡¨
+ * @author å‡¯
  *
  */
 @Repository("sysLoginDao")

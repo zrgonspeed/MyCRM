@@ -22,14 +22,14 @@ public class PublicNoticeBiz {
 		this.publicNoticeDao = publicNoticeDao;
 	}
 	/**
-	 * 全查
+	 * 鍏ㄦ煡
 	 * @return
 	 */
 	public List<PublicNotice> findAllNotice(){
 		return publicNoticeDao.findAllNotice();
 	}
 	/**
-	 * 添加
+	 * 娣诲姞
 	 * @param publicNotice
 	 * @return
 	 */
@@ -45,7 +45,7 @@ public class PublicNoticeBiz {
 		}
 	}
 	/**
-	 * 单查
+	 * 鍗曟煡
 	 * @param id
 	 * @return
 	 */
@@ -53,7 +53,7 @@ public class PublicNoticeBiz {
 		return publicNoticeDao.get(id);
 	}
 	/**
-	 * 修改
+	 * 淇敼
 	 * @param publicNotice
 	 */
 	public boolean updateNotice(PublicNotice publicNotice){
@@ -71,7 +71,7 @@ public class PublicNoticeBiz {
 		}
 	}
 	/**
-	 * 删除
+	 * 鍒犻櫎
 	 * @param id
 	 * @return boolean 
 	 */

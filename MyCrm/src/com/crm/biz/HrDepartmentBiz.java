@@ -55,7 +55,7 @@ public class HrDepartmentBiz {
 	
 	public boolean deleteFalse(int id){
 		HrDepartment hrDepartment = hrDepartmentDao.get(id);
-		hrDepartment.setIsdelete(0);//0¾ÍÊÇÒÑÉ¾³ý
+		hrDepartment.setIsdelete(0);//0å°±æ˜¯å·²åˆ é™¤
 		hrDepartment.setDeleteTime(new Date());
 		try {
 			hrDepartmentDao.save(hrDepartment);
@@ -77,7 +77,7 @@ public class HrDepartmentBiz {
 
 	public boolean doTrashAdd(int id) {
 		HrDepartment hrDepartment = hrDepartmentDao.get(id);
-		hrDepartment.setIsdelete(1);//0¾ÍÊÇÒÑÉ¾³ý
+		hrDepartment.setIsdelete(1);//0å°±æ˜¯å·²åˆ é™¤
 		hrDepartment.setDeleteTime(null);
 		try {
 			hrDepartmentDao.save(hrDepartment);

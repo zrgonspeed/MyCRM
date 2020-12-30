@@ -23,10 +23,10 @@ import com.crm.info.PersonalEvent;
 import com.crm.info.SysRole;
 @Scope("prototype")
 public class WebTools {
-	public static int follow_custid;//±£¥Ê∏˙Ω¯ øÕªßµƒid
-	public static int receive_orderid;//±£¥Ê ’øÓµƒ∂©µ•id
-	public static int invoice_orderid;//±£¥Êø™∆±µƒ∂©µ•id
-	public static int[] mailIdes; //±£¥Ê” º˛µƒid
+	public static int follow_custid;//‰øùÂ≠òË∑üËøõ ÂÆ¢Êà∑ÁöÑid
+	public static int receive_orderid;//‰øùÂ≠òÊî∂Ê¨æÁöÑËÆ¢Âçïid
+	public static int invoice_orderid;//‰øùÂ≠òÂºÄÁ•®ÁöÑËÆ¢Âçïid
+	public static int[] mailIdes; //‰øùÂ≠òÈÇÆ‰ª∂ÁöÑid
 	
 	public static String convertJson(Object object) {
 		String data = "";
@@ -183,15 +183,15 @@ public class WebTools {
 			mms.put(m.getName(), m);
 		}
 		for(Method m:t.getMethods()){
-			String name=m.getName();//ªÒ»°∑Ω∑®√˚
+			String name=m.getName();//Ëé∑ÂèñÊñπÊ≥ïÂêç
 			if(name.startsWith("get")){
-				String retName= m.getReturnType().getName();//ªÒ»°∑Ω∑®∑µªÿ¿‡–Õ
+				String retName= m.getReturnType().getName();//Ëé∑ÂèñÊñπÊ≥ïËøîÂõûÁ±ªÂûã
 				if(retName.startsWith("java.util.Set") || retName.startsWith("com.crm.info")){
-					//«Â≥˝ getName-->setName
+					//Ê∏ÖÈô§ getName-->setName
 					name="s"+name.substring(1);
 					try {
 						if(mms.containsKey(name)){
-							Method setM= mms.get(name);//ªÒ»°Set∑Ω∑®
+							Method setM= mms.get(name);//Ëé∑ÂèñSetÊñπÊ≥ï
 							setM.invoke(obj,new Object[]{null});//obj.setXXX(null);
 						}
 					} catch (Exception e) {

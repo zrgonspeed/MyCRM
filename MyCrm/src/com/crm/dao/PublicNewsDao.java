@@ -12,8 +12,8 @@ import com.crm.info.PublicNews;
 import com.haha.hibernate.HibernateDao;
 
 /**
- * ¹«¹²ÐÂÎÅ±í
- * @author ¿­
+ * å…¬å…±æ–°é—»è¡¨
+ * @author å‡¯
  *
  */
 @Repository("publicNewsDao")

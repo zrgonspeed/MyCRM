@@ -24,7 +24,7 @@ public class CrmProductBiz {
 		this.crmProductCategoryDao = crmProductCategoryDao;
 	}
 	/**
-	 * °´·ÖÀà²éÑ¯²úÆ·
+	 * æŒ‰åˆ†ç±»æŸ¥è¯¢äº§å“
 	 * @param id
 	 * @return
 	 */

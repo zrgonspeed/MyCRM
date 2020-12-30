@@ -60,7 +60,7 @@ public class HrPostBiz {
 	
 	public boolean deleteFalse(int id){
 		HrPost hrPost = hrPostDao.get(id);
-		hrPost.setIsdelete(0);//0¾ÍÊÇÒÑÉ¾³ý
+		hrPost.setIsdelete(0);//0å°±æ˜¯å·²åˆ é™¤
 		hrPost.setDeleteTime(new Timestamp(new Date().getTime()));
 		
 		try {
@@ -88,7 +88,7 @@ public class HrPostBiz {
 	}
 	public boolean doTrashAdd(int id) {
 		HrPost hrPost = hrPostDao.get(id);
-		hrPost.setIsdelete(1);//0¾ÍÊÇÒÑÉ¾³ý
+		hrPost.setIsdelete(1);//0å°±æ˜¯å·²åˆ é™¤
 		hrPost.setDeleteTime(null);
 		try {
 			hrPostDao.save(hrPost);

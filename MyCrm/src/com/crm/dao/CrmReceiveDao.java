@@ -13,8 +13,8 @@ import com.crm.vobj.CrmReceiveVobj;
 import com.haha.hibernate.HibernateDao;
 
 /**
- * ¿Í»§ÊÕ¿î±í
- * @author ¿­
+ * å®¢æˆ·æ”¶æ¬¾è¡¨
+ * @author å‡¯
  *
  */
 @Repository("crmReceiveDao")
@@ -34,27 +34,27 @@ public class CrmReceiveDao extends HibernateDao<CrmReceive, Integer> {
 	private Criteria createCriter(Session s, CrmReceiveVobj cy) {
 		Criteria c = s.createCriteria(CrmReceive.class);
 		if (cy.getCustomerId() != null && cy.getCustomerId() > 0) {
-			// ¹«Ë¾²»Îª¿Õ
+			// å…¬å¸ä¸ä¸ºç©º
 			c.add(Restrictions.eq("crmCustomer.id", cy.getCustomerId()));
 		}
 		if (cy.getDepartmentId() != null && cy.getDepartmentId() > 0) {
-			// ÒµÎñ²¿ÃÅ²»Îª¿Õ
+			// ä¸šåŠ¡éƒ¨é—¨ä¸ä¸ºç©º
 			c.add(Restrictions.eq("hrDepartment.id", cy.getDepartmentId()));
 		}
 		if (cy.getEmployeeId() != null && cy.getEmployeeId() > 0) {
-			// ÒµÎñÔ±²»Îª¿Õ
+			// ä¸šåŠ¡å‘˜ä¸ä¸ºç©º
 			c.add(Restrictions.eq("hrEmployeeByCEmpid.id", cy.getEmployeeId()));
 		}
 		if (cy.getStartdate() != null) {
-			//Ç©¶©Ê±¼ä¿ªÊ¼
+			//ç­¾è®¢æ—¶é—´å¼€å§‹
 			c.add(Restrictions.ge("receiveDate", cy.getStartdate()));
 		}
 		if (cy.getEnddate() != null) {
-			//Ç©¶©Ê±¼ä½áÊø
+			//ç­¾è®¢æ—¶é—´ç»“æŸ
 			c.add(Restrictions.le("receiveDate", cy.getEnddate()));
 		}
 		if (cy.getNum() != null && cy.getNum().length() > 0) {
-			// ¸ù½øÄÚÈÝ²»Îª¿Õ
+			// æ ¹è¿›å†…å®¹ä¸ä¸ºç©º
 			c.add(Restrictions.ilike("receiveNum", cy.getNum(), MatchMode.ANYWHERE));
 		}
 		if (cy.getPaytype()!=null && cy.getPaytype() > 0) {

@@ -23,7 +23,7 @@ public class CrmCustomerBiz {
 		this.crmCustomerDao = crmCustomerDao;
 	}
 	/**
-	 * ĞÂÔö¶ÔÏó
+	 * æ–°å¢å¯¹è±¡
 	 * @param customer
 	 * @return
 	 */
@@ -42,7 +42,7 @@ public class CrmCustomerBiz {
 	}
 
 	/**
-	 * ÕæÉ¾³ı
+	 * çœŸåˆ é™¤
 	 * @param id
 	 * @return
 	 */
@@ -57,7 +57,7 @@ public class CrmCustomerBiz {
 
 	}
 	/**
-	 * ĞŞ¸Ä¶ÔÏó
+	 * ä¿®æ”¹å¯¹è±¡
 	 * @param customer
 	 * @return
 	 */
@@ -88,13 +88,13 @@ public class CrmCustomerBiz {
 	}
 
 	/**
-	 * Ô¤É¾³ı
+	 * é¢„åˆ é™¤
 	 * @param id
 	 * @return
 	 */
 	public boolean deleteFalse(int id) {
 		CrmCustomer customer = crmCustomerDao.get(id);
-		customer.setIsdelete(0);// 0¾ÍÊÇÒÑÉ¾³ı
+		customer.setIsdelete(0);// 0å°±æ˜¯å·²åˆ é™¤
 		customer.setDeleteTime(new Timestamp(new Date().getTime()));
 		try {
 			crmCustomerDao.save(customer);
@@ -105,14 +105,14 @@ public class CrmCustomerBiz {
 		}
 	}
 	/**
-	 * È«²é  isdelete=1 ÓĞĞ§Êı¾İ
+	 * å…¨æŸ¥  isdelete=1 æœ‰æ•ˆæ•°æ®
 	 * @return
 	 */
 	public List<CrmCustomer> findAll(){
 		return crmCustomerDao.findAll();
 	}
 	/**
-	 * ¼ÓÌõ¼ş²éÑ¯
+	 * åŠ æ¡ä»¶æŸ¥è¯¢
 	 * @param bw
 	 * @return
 	 */
@@ -120,7 +120,7 @@ public class CrmCustomerBiz {
 		return crmCustomerDao.findAllByWhere(bw);
 	}
 	/**
-	 * ¸ù¾İid µ¥²é
+	 * æ ¹æ®id å•æŸ¥
 	 * @param id
 	 * @return
 	 */
@@ -132,7 +132,7 @@ public class CrmCustomerBiz {
 	}
 	public boolean doTrashAdd(int id) {
 		CrmCustomer customer = crmCustomerDao.get(id);
-		customer.setIsdelete(1);	//0¾ÍÊÇÒÑÉ¾³ı
+		customer.setIsdelete(1);	//0å°±æ˜¯å·²åˆ é™¤
 		customer.setDeleteTime(null);
 		try {
 			crmCustomerDao.save(customer);

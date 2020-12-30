@@ -29,7 +29,7 @@ public class CrmCustomerAction extends ActionSupport {
 	public void setCrmContactBiz(CrmContactBiz crmContactBiz) {
 		this.crmContactBiz = crmContactBiz;
 	}
-	//Ãıº˛≤È—Ø
+	//Êù°‰ª∂Êü•ËØ¢
 	private CrmCustomeVobj bwvobj;
 	
 	public CrmCustomeVobj getBwvobj() {
@@ -82,6 +82,7 @@ public class CrmCustomerAction extends ActionSupport {
 	
 	public String update(){
 		crmCustomerBiz.update(customer);
+		System.out.println(customer.getAddress());
 		return "update";
 	}
 	

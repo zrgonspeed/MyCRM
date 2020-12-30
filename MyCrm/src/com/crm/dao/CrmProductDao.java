@@ -9,9 +9,9 @@ import com.crm.info.CrmProduct;
 import com.haha.hibernate.HibernateDao;
 
 /**
- * ¿Í»§²úÆ·±í
+ * å®¢æˆ·äº§å“è¡¨
  * 
- * @author ¿­
+ * @author å‡¯
  * 
  */
 @Repository("crmProductDao")

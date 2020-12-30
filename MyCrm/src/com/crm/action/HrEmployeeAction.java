@@ -67,17 +67,17 @@ public class HrEmployeeAction extends ActionSupport implements
 	}
 
 	/**
-	 * login.jspÒ³ÃæµÄÑéÖ¤ÂëÉú³É
+	 * login.jspé¡µé¢çš„éªŒè¯ç ç”Ÿæˆ
 	 */
 	public void ajaxValidateCode() {
-		response.setContentType("image/jpeg");// ÉèÖÃÏàÓ¦ÀàĞÍ,¸æËßä¯ÀÀÆ÷Êä³öµÄÄÚÈİÎªÍ¼Æ¬
-		response.setHeader("Pragma", "No-cache");// ÉèÖÃÏìÓ¦Í·ĞÅÏ¢£¬¸æËßä¯ÀÀÆ÷²»Òª»º´æ´ËÄÚÈİ
+		response.setContentType("image/jpeg");// è®¾ç½®ç›¸åº”ç±»å‹,å‘Šè¯‰æµè§ˆå™¨è¾“å‡ºçš„å†…å®¹ä¸ºå›¾ç‰‡
+		response.setHeader("Pragma", "No-cache");// è®¾ç½®å“åº”å¤´ä¿¡æ¯ï¼Œå‘Šè¯‰æµè§ˆå™¨ä¸è¦ç¼“å­˜æ­¤å†…å®¹
 		response.setHeader("Cache-Control", "no-cache");
 		response.setDateHeader("Expire", 0);
 		ValidateCode randomValidateCode = new ValidateCode();
 		try {
 			ValidateCode.code = randomValidateCode.getRandcode(request,
-					response);// Êä³öÍ¼Æ¬·½·¨
+					response);// è¾“å‡ºå›¾ç‰‡æ–¹æ³•
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -175,12 +175,12 @@ public class HrEmployeeAction extends ActionSupport implements
 
 	private String name, pwd, inpcode;
 
-	// µÇÂ¼Ãû½ÓÊÕ
+	// ç™»å½•åæ¥æ”¶
 	public void setName(String name) {
 		this.name = name.trim();
 	}
 
-	// µÇÂ¼ÃÜÂë½ÓÊÕ
+	// ç™»å½•å¯†ç æ¥æ”¶
 	public void setPwd(String pwd) {
 		if (!pwd.trim().equals("")) {
 			this.pwd = Md5.MD5(pwd.trim());
@@ -189,13 +189,13 @@ public class HrEmployeeAction extends ActionSupport implements
 		}
 	}
 
-	// µÇÂ¼ÑéÖ¤Âë½ÓÊÕ
+	// ç™»å½•éªŒè¯ç æ¥æ”¶
 	public void setInpcode(String inpcode) {
 		this.inpcode = inpcode.trim();
 	}
 
 	
-	// ÓÃÓÚ»ñÈ¡ÁªÏµÈË×ÜÊı
+	// ç”¨äºè·å–è”ç³»äººæ€»æ•°
 	private CrmContactBiz crmContactBiz;
 	
 	public void setCrmContactBiz(CrmContactBiz crmContactBiz) {
@@ -203,13 +203,13 @@ public class HrEmployeeAction extends ActionSupport implements
 	}
 
 	/**
-	 * µÇÂ¼·½·¨ µÇÂ¼³É¹¦µÄÓÃ»§ Session µÄkey = 'emp'
+	 * ç™»å½•æ–¹æ³• ç™»å½•æˆåŠŸçš„ç”¨æˆ· Session çš„key = 'emp'
 	 * 
 	 * @return
 	 */
 	public String login() {
 		if (inpcode.equalsIgnoreCase(ValidateCode.code)) {
-			// µÇÂ¼
+			// ç™»å½•
 			HrEmployee employee = hrEmployeeBiz.login(name, pwd);
 			if (employee != null) {
 				if (employee.getCanlogin() == 1) {
@@ -220,18 +220,18 @@ public class HrEmployeeAction extends ActionSupport implements
 					
 					return "login";
 				} else {
-					Scopes.getRequestMap().put("err", "ÄúÃ»ÓĞÈ¨ÏŞµÇÂ¼£¬ÇëÁªÏµ¹ÜÀíÔ±");
-					// ÄúÃ»ÓĞÈ¨ÏŞµÇÂ¼
+					Scopes.getRequestMap().put("err", "æ‚¨æ²¡æœ‰æƒé™ç™»å½•ï¼Œè¯·è”ç³»ç®¡ç†å‘˜");
+					// æ‚¨æ²¡æœ‰æƒé™ç™»å½•
 					return "loginerr";
 				}
 			} else {
-				Scopes.getRequestMap().put("err", "ÄúÊäÈëÕËºÅ»òÃÜÂë´íÎó");
-				// ÕË»§ÃÜÂë´íÎó
+				Scopes.getRequestMap().put("err", "æ‚¨è¾“å…¥è´¦å·æˆ–å¯†ç é”™è¯¯");
+				// è´¦æˆ·å¯†ç é”™è¯¯
 				return "loginerr";
 			}
 		} else {
-			Scopes.getRequestMap().put("err", "ÄúÊäÈëÑéÖ¤Âë´íÎó");
-			// ÑéÖ¤Âë´íÎó
+			Scopes.getRequestMap().put("err", "æ‚¨è¾“å…¥éªŒè¯ç é”™è¯¯");
+			// éªŒè¯ç é”™è¯¯
 			return "loginerr";
 		}
 	}

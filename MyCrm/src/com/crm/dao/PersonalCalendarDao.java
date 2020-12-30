@@ -6,8 +6,8 @@ import com.crm.info.PersonalCalendar;
 import com.haha.hibernate.HibernateDao;
 
 /**
- * ¸öÈËÈÕ³Ì±í
- * @author ¿­
+ * ä¸ªäººæ—¥ç¨‹è¡¨
+ * @author å‡¯
  *
  */
 @Repository("PersonalCalendarDao")

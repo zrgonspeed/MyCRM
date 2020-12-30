@@ -6,8 +6,8 @@ import com.crm.info.PublicChatRoom;
 import com.haha.hibernate.HibernateDao;
 
 /**
- * ¹«¹²ÁÄÌìÊÒ±í
- * @author ¿­
+ * å…¬å…±èŠå¤©å®¤è¡¨
+ * @author å‡¯
  *
  */
 @Repository("publicChatRoomDao")

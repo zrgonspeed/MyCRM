@@ -20,7 +20,7 @@ public class HrEmployeeBiz {
 		this.hrEmployeeDao = hrEmployeeDao;
 	}
 	/**
-	 * Ô±¹¤µÇÂ¼
+	 * å‘˜å·¥ç™»å½•
 	 * @param name
 	 * @param pwd
 	 * @return
@@ -29,7 +29,7 @@ public class HrEmployeeBiz {
 		return hrEmployeeDao.login(name,pwd);
 	}
 	/**
-	 * »ñÈ¡¶ÔÓ¦²¿ÃÅµÄÔ±¹¤
+	 * è·å–å¯¹åº”éƒ¨é—¨çš„å‘˜å·¥
 	 * @param depid
 	 * @return
 	 */

@@ -65,7 +65,7 @@ public class HrPositionBiz  {
 	
 	public boolean deleteFalse(int id){
 		HrPosition hrPosition = hrPositionDao.get(id);
-		hrPosition.setIsdelete(0);//0¾ÍÊÇÒÑÉ¾³ý
+		hrPosition.setIsdelete(0);//0å°±æ˜¯å·²åˆ é™¤
 		hrPosition.setDeleteTime(new Timestamp(new Date().getTime()));
 		
 		try {
@@ -82,7 +82,7 @@ public class HrPositionBiz  {
 
 	public boolean doTrashAdd(int id) {
 		HrPosition hrPosition = hrPositionDao.get(id);
-		hrPosition.setIsdelete(1);//0¾ÍÊÇÒÑÉ¾³ý
+		hrPosition.setIsdelete(1);//0å°±æ˜¯å·²åˆ é™¤
 		hrPosition.setDeleteTime(null);
 		try {
 			hrPositionDao.save(hrPosition);

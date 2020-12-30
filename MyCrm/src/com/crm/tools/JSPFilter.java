@@ -22,6 +22,8 @@ public class JSPFilter implements Filter {
 		
 		String path = req.getRequestURI();
         
+		request.setCharacterEncoding("utf-8");
+		
 		if (path.contains("login") || 
 				path.contains("/js/") || 
 				path.contains("/image/") || 
@@ -30,7 +32,7 @@ public class JSPFilter implements Filter {
 				path.contains("/css/")
 				 || path.contains("/images/")) {
 			
-			// 放行
+			// 鏀捐
 			chain.doFilter(request, response); 
 			return;
 		}
@@ -38,7 +40,7 @@ public class JSPFilter implements Filter {
 		HttpSession session = req.getSession();
 		HrEmployee emp = (HrEmployee) session.getAttribute("emp");
 		
-		// 如果session中存在emp证明用户登录，可以放行。否则认为未登陆重定向到login.jsp
+		// 濡傛灉session涓瓨鍦╡mp璇佹槑鐢ㄦ埛鐧诲綍锛屽彲浠ユ斁琛屻�傚惁鍒欒涓烘湭鐧婚檰閲嶅畾鍚戝埌login.jsp
 		if (emp == null) {
 			res.sendRedirect(req.getContextPath() + "/login.jsp");
 		} else {

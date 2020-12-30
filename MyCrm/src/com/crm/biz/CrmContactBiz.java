@@ -21,7 +21,7 @@ public class CrmContactBiz {
 		this.crmContactDao = crmContactDao;
 	}
 	/**
-	 * ¸ú½øid ÕæÉ¾³ı
+	 * è·Ÿè¿›id çœŸåˆ é™¤
 	 * @param id
 	 * @return
 	 */
@@ -35,7 +35,7 @@ public class CrmContactBiz {
 		}
 	}
 	/**
-	 * ¸üĞÂ
+	 * æ›´æ–°
 	 * @param customer
 	 * @return
 	 */
@@ -62,13 +62,13 @@ public class CrmContactBiz {
 			}
 	}
 	/**
-	 * ¼ÙÉ¾³ı
+	 * å‡åˆ é™¤
 	 * @param id
 	 * @return
 	 */
 	public boolean deleteFalse(int id) {
 		CrmContact customer = crmContactDao.get(id);
-		customer.setIsdelete(0);//0¾ÍÊÇÒÑÉ¾³ı
+		customer.setIsdelete(0);//0å°±æ˜¯å·²åˆ é™¤
 		customer.setDeleteTime(new Timestamp(new Date().getTime()));
 		try {
 			crmContactDao.save(customer);
@@ -79,7 +79,7 @@ public class CrmContactBiz {
 		}
 	}
 	/**
-	 * ²éÑ¯È«²¿Êı¾İ  ²»ÅÅ³ıisdelete = 0
+	 * æŸ¥è¯¢å…¨éƒ¨æ•°æ®  ä¸æ’é™¤isdelete = 0
 	 * @return
 	 */
 	public List<CrmContact> findAll() {
@@ -88,7 +88,7 @@ public class CrmContactBiz {
 	}
 
 	/**
-	 * Ìõ¼ş²éÑ¯
+	 * æ¡ä»¶æŸ¥è¯¢
 	 * @param cy
 	 * @return
 	 */
@@ -97,7 +97,7 @@ public class CrmContactBiz {
 	}
 
 	/**
-	 * µ¥²é
+	 * å•æŸ¥
 	 * @param id
 	 * @return
 	 */
@@ -106,7 +106,7 @@ public class CrmContactBiz {
 	}
 
 	/**
-	 * Ôö¼Ó
+	 * å¢åŠ 
 	 * @param contact
 	 * @return
 	 */
@@ -128,7 +128,7 @@ public class CrmContactBiz {
 	}
 	public boolean doTrashAdd(int id) {
 		CrmContact customer = crmContactDao.get(id);
-		customer.setIsdelete(1);//0¾ÍÊÇÒÑÉ¾³ı
+		customer.setIsdelete(1);//0å°±æ˜¯å·²åˆ é™¤
 		customer.setDeleteTime(null);
 		try {
 			crmContactDao.save(customer);

@@ -54,7 +54,7 @@ public class CrmContactAction extends ActionSupport {
 	}
 	
 	/**
-	 * 获取联系人总数
+	 * 鑾峰彇鑱旂郴浜烘�绘暟
 	 * @return
 	 */
 	public String ajaxGetContNum() {
@@ -62,7 +62,7 @@ public class CrmContactAction extends ActionSupport {
 		String data = WebTools.convertJson(list == null ? 0 : list.size());
 		Scopes.getSessionMap().put("data", data);
 		
-		System.out.println("我的桌面:我的联系人数: " + data);
+		System.out.println("鎴戠殑妗岄潰:鎴戠殑鑱旂郴浜烘暟: " + data);
 		return "ajax";
 	}
 	
@@ -78,7 +78,7 @@ public class CrmContactAction extends ActionSupport {
 		crmContactBiz.update(contact);
 		return "update";
 	}
-	//删除
+	//鍒犻櫎
 	public String del(){
 		crmContactBiz.deleteFalse(id);
 		return "delete";

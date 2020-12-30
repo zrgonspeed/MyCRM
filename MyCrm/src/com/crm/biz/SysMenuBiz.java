@@ -21,9 +21,9 @@ public class SysMenuBiz {
 	}
 
 	public List<SysMenuVobj> findShowMenusByRole(SysRole sysRole) {
-		//½ÓÊÕµ±Ç°È¨ÏŞÏÂ²Ëµ¥Ïî
+		//æ¥æ”¶å½“å‰æƒé™ä¸‹èœå•é¡¹
 		List<SysMenuVobj> list=new ArrayList<SysMenuVobj>();
-		//»ñÈ¡È¨ÏŞÏîIdÊı×é
+		//è·å–æƒé™é¡¹Idæ•°ç»„
 		String[] sysid = sysRole.getChildmenus().split(",");
 		
 		for (String id : sysid) {
@@ -39,20 +39,20 @@ public class SysMenuBiz {
 		SysMenuVobj vobj=null;
 		List<SysMenuVobj> vobjs=new ArrayList<SysMenuVobj>();
 		for (SysMenuVobj me : list) {
-			//¸¸idµÈÓÚ0µÄ¶¼ÊÇ¸ù½Úµã
+			//çˆ¶idç­‰äº0çš„éƒ½æ˜¯æ ¹èŠ‚ç‚¹
 			if (me.getParentid().equals(0)) {
 				
 				vobj= me;
-				int pkid = me.getMenuId();//»ñÈ¡µ½¸¸½ÚµãµÄÖ÷¼üid
+				int pkid = me.getMenuId();//è·å–åˆ°çˆ¶èŠ‚ç‚¹çš„ä¸»é”®id
 				
 				for (SysMenuVobj chime : list) {
-					//Èç¹û¶ş¼¶½ÚµãµÄparent id µÈÓÚ ÉÏ¼¶µÄ Ö÷¼üPK id
+					//å¦‚æœäºŒçº§èŠ‚ç‚¹çš„parent id ç­‰äº ä¸Šçº§çš„ ä¸»é”®PK id
 					if (chime.getParentid().equals(pkid)) {
 						SysMenuVobj two = chime;
-						int pkthree = chime.getMenuId(); //»ñÈ¡µ½¶ş¼¶½ÚµãµÄ PK
+						int pkthree = chime.getMenuId(); //è·å–åˆ°äºŒçº§èŠ‚ç‚¹çš„ PK
 						
 						for (SysMenuVobj threeme : list) {
-							//Èç¹ûÈı¼¶½Úµãparent id µÈÓÚ ¶ş¼¶ ½Úµã PK¡¡id
+							//å¦‚æœä¸‰çº§èŠ‚ç‚¹parent id ç­‰äº äºŒçº§ èŠ‚ç‚¹ PKã€€id
 							if (threeme.getParentid().equals(pkthree)) {
 								two.sysMenus.add(threeme);
 							}
@@ -79,7 +79,7 @@ public class SysMenuBiz {
 	}
 	
 	public List<SysMenuVobj> findAllTree(){
-		//½ÓÊÕµ±Ç°È¨ÏŞÏÂ²Ëµ¥Ïî
+		//æ¥æ”¶å½“å‰æƒé™ä¸‹èœå•é¡¹
 		List<SysMenuVobj> list=new ArrayList<SysMenuVobj>();
 		List<SysMenu> menus=sysMenuDao.getAll();
 		System.out.println(menus);
@@ -90,20 +90,20 @@ public class SysMenuBiz {
 		List<SysMenuVobj> vobjs=new ArrayList<SysMenuVobj>();
 		
 		for (SysMenuVobj me : list) {
-			//¸¸idµÈÓÚ0µÄ¶¼ÊÇ¸ù½Úµã
+			//çˆ¶idç­‰äº0çš„éƒ½æ˜¯æ ¹èŠ‚ç‚¹
 			if (me.getParentid().equals(0)) {
 				
 				vobj= me;
-				int pkid = me.getMenuId();//»ñÈ¡µ½¸¸½ÚµãµÄÖ÷¼üid
+				int pkid = me.getMenuId();//è·å–åˆ°çˆ¶èŠ‚ç‚¹çš„ä¸»é”®id
 				
 				for (SysMenuVobj chime : list) {
-					//Èç¹û¶ş¼¶½ÚµãµÄparent id µÈÓÚ ÉÏ¼¶µÄ Ö÷¼üPK id
+					//å¦‚æœäºŒçº§èŠ‚ç‚¹çš„parent id ç­‰äº ä¸Šçº§çš„ ä¸»é”®PK id
 					if (chime.getParentid().equals(pkid)) {
 						SysMenuVobj two = chime;
-						int pkthree = chime.getMenuId(); //»ñÈ¡µ½¶ş¼¶½ÚµãµÄ PK
+						int pkthree = chime.getMenuId(); //è·å–åˆ°äºŒçº§èŠ‚ç‚¹çš„ PK
 						
 						for (SysMenuVobj threeme : list) {
-							//Èç¹ûÈı¼¶½Úµãparent id µÈÓÚ ¶ş¼¶ ½Úµã PK¡¡id
+							//å¦‚æœä¸‰çº§èŠ‚ç‚¹parent id ç­‰äº äºŒçº§ èŠ‚ç‚¹ PKã€€id
 							if (threeme.getParentid().equals(pkthree)) {
 								two.sysMenus.add(threeme);
 							}
